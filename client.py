@@ -15,8 +15,8 @@ class Host():
     def close(self):
         self.channel.close()
 
-host_address = os.getenv("GRPC-TRANSFORMER-HOST", 'localhost:50051')
+host_address = os.getenv("GRPC_TRANSFORMER_HOST", 'localhost:50051')
 
 host = Host(address=host_address)
 def generate_text(text):
-    return host.generate_text('text')
+    return host.generate_text(text)
