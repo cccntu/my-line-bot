@@ -64,11 +64,11 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def message_text(event):
     source = event.source
-    #if source.type is SourceUser:
-    line_bot_api.reply_message(
-        event.reply_token,
-        TextSendMessage(text=f'test:source type={source.type}, {event.message.text}')
-    )
+    if source.type == 'user':
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text='test:user id {source.user_id}, {event.message.text}')
+        )
 
 
 if __name__ == "__main__":
