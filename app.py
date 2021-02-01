@@ -67,7 +67,7 @@ def message_text(event):
     #if source.type is SourceUser:
     line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text='test:source type={source.type}, {event.message.text}')
+        TextSendMessage(text=f'test:source type={source.type}, {event.message.text}')
     )
 
 
