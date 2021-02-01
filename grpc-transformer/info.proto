@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+message Message {
+  string text = 1;
+}
+service TextGenerationService {
+  rpc GenerateText(Message) returns (Message);
+}

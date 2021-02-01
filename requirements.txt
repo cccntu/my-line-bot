@@ -1,5 +1,4 @@
 line-bot-sdk
 flask
 gunicorn
-transformers
-torch
+grpcio-tools
