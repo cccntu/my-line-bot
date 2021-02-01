@@ -1,7 +1,7 @@
 # GPT-2 in your phone: Line bot with GPT-2 sentence completion
 
 Because free tier Heroku doesn't have enough space, I run the transformer model on another local machine
-and server the main app on Heroku (becuase line requires https web hook)
+and server the main app on Heroku (becuase line requires https web hook), the model serving uses gRPC.
 
 ## How to Use
 
@@ -17,4 +17,3 @@ and server the main app on Heroku (becuase line requires https web hook)
 
 ### Step 2: deploy the app on Heroku & line
 * follow the official tutorial and push this repo
-
